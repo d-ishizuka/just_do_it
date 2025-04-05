@@ -21,7 +21,7 @@ type taskRepository struct {
 }
 
 func NewTaskRepository(db *gorm.DB) ITaskRepository {
-	return db &taskRepository{db}
+	return &taskRepository{db}
 }
 
 func (tr *taskRepository) GetAllTasks(tasks *[]model.Task, userId uint) error {

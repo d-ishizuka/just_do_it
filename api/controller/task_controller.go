@@ -13,7 +13,7 @@ import (
 type ITaskController interface {
 	GetAllTasks(c echo.Context) error
 	GetTaskById(c echo.Context) error
-	CerateTask(c echo.Context) error
+	CreateTask(c echo.Context) error
 	UpdateTask(c echo.Context) error
 	DeleteTask(c echo.Context) error
 }
@@ -51,7 +51,7 @@ func (tc *taskController) GetTaskById(c echo.Context) error {
 	return c.JSON(http.StatusOK, taskRes)
 }
 
-func (tc *taskController) CerateTask(c echo.Context) error {
+func (tc *taskController) CreateTask(c echo.Context) error {
 	user := c.Get("user").(*jwt.Token)
 	claims := user.Claims.(jwt.MapClaims)
 	userId := claims["user_id"]

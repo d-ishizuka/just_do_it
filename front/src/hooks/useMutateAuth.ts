@@ -34,7 +34,7 @@ export const useMutateAuth = () => {
       }
     }
   })
-  const logoutMuation = useMutation({
+  const logoutMutation = useMutation({
     mutationFn: async (user: Credential) => 
       await axios.post(`${process.env.REACT_APP_API_URL}/logout`, user),
     onSuccess: () => {
@@ -49,5 +49,5 @@ export const useMutateAuth = () => {
       }
     }
   })
-  return { loginMutation, registerMutation, logoutMuation }
+  return { loginMutation, registerMutation, logoutMutation }
 }

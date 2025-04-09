@@ -1,46 +1,55 @@
-# Getting Started with Create React App
+# Just Do It - タスク管理アプリケーション (フロントエンド)
+React製のシンプルなタスク管理アプリケーション
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## 📋 概要
+このプロジェクトはReactとTypeScriptを使用したタスク管理アプリケーションです。ユーザー認証、タスクの作成・編集・削除などの機能を備えています。
 
-## Available Scripts
+## ⚙️ 使用技術
+- React (Create React App)
+- TypeScript
+- React Query (TanStack Query)
+- Zustand (状態管理)
+- Tailwind CSS
+- Axios
 
-In the project directory, you can run:
+## 🚀 セットアップ手順
+1. 依存パッケージのインストール
+2. APIサーバーの起動
+重要: フロントエンドを起動する前に、必ずAPIサーバーが稼働していることを確認してください。
 
-### `npm start`
+APIサーバー起動手順は、APIプロジェクトのREADMEを参照してください。
 
-Runs the app in the development mode.\
-Open [http://localhost:3001](http://localhost:3001) to view it in the browser.
+3. 環境変数の設定
+.envファイルを作成し、以下の内容を設定します：
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+4. アプリケーションの起動
+ブラウザで http://localhost:3001 にアクセスして、アプリケーションを表示できます。
 
-### `npm test`
+## 💻 利用可能なスクリプト
+```bash
+npm start
+```
+開発モードでアプリを実行します。APIサーバーが稼働している必要があります。
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+```bash
+npm test
+```
+テストランナーを対話モードで起動します。
 
-### `npm run build`
+```bash
+npm run build
+```
+本番用のアプリケーションをbuildフォルダに生成します。
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## 🌐 APIとの連携
+このフロントエンドアプリケーションは、GOで実装されたバックエンドAPIサーバーと通信します。以下の機能に対応しています：
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+- ユーザー登録・ログイン
+- CSRFトークン保護
+- タスクの作成・取得・更新・削除
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
+## 📝 開発メモ
+開発時にはAPIサーバーのCORSとCSRF設定にご注意ください
+React Query DevToolsを使って、データフェッチングの挙動をデバッグできます
+Zustandを使用して共有状態を管理しています
+詳細な実装については、各コンポーネントとフックのファイルをご覧ください。

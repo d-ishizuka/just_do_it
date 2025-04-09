@@ -47,26 +47,26 @@ export const Auth = () => {
           onChange={(e) => setEmail(e.target.value)}
           value={email}
         />
+        <div>
+          <input 
+            className="mb-3 px-3 text-sm py-2 border border-gray-300"
+            name="password"
+            type="password"
+            placeholder="Password"
+            onChange={(e)=> setPw(e.target.value)}
+            value={pw}
+          />
+        </div>
+        <div className="flex justify-center">
+          <button
+            className="disabled:opacity-40 py-2 px-4 rounded text-white bg-indigo-600"
+            disabled={!email || !pw}
+            type="submit"
+          >
+            {isLogin ? 'Login' : 'Create an account'}
+          </button>
+        </div>
       </form>
-      <div>
-        <input 
-          className="mb-3 px-3 text-sm py-2 border border-gray-300"
-          name="password"
-          type="password"
-          placeholder="Password"
-          onChange={(e)=> setPw(e.target.value)}
-          value={pw}
-        />
-      </div>
-      <div className="flex justify-center">
-        <button
-          className="disabled:opacity-40 py-2 px-4 rounded text-white bg-indigo-600"
-          disabled={!email || !pw}
-          type="submit"
-        >
-          {isLogin ? 'Login' : 'Create an account'}
-        </button>
-      </div>
       <ArrowPathIcon
         onClick={() => setIsLogin(!isLogin)}
         className="h-6 w-6 my-2 text-blue-500 cursor-pointer"

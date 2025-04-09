@@ -44,6 +44,7 @@ export const useMutateTask = () => {
           )
         )
       }
+      resetEditedTask()
     },
     onError: (err: any) => {
       if (err.response.data.message) {

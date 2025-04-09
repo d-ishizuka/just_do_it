@@ -35,8 +35,8 @@ export const useMutateAuth = () => {
     }
   })
   const logoutMutation = useMutation({
-    mutationFn: async (user: Credential) => 
-      await axios.post(`${process.env.REACT_APP_API_URL}/logout`, user),
+    mutationFn: async () => 
+      await axios.post(`${process.env.REACT_APP_API_URL}/logout`),
     onSuccess: () => {
       resetEditedTask()
       navigate('/')

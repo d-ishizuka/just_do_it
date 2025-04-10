@@ -9,7 +9,6 @@
 just_do_it/
 ├── api/          # Go言語バックエンドAPI
 ├── front/        # React+TypeScriptフロントエンド
-├── docker-compose.yml  # DB用Docker構成ファイル
 └── README.md     # このファイル
 ```
 
